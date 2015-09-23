@@ -9,7 +9,7 @@
   "activationCommands": {
     "atom-workspace": "lilycompile:compile"
   },
-  "repository": "https://github.com/atom/lilycompile",
+  "repository": "https://github.com/AljoschaMeyer/atom-lilycompile",
   "license": "MIT",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
