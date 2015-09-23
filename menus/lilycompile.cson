@@ -1,0 +1,21 @@
+'context-menu':
+  '[data-grammar="source AtLilyPond"]': [
+    {
+      'label': 'Compile Lilypond File'
+      'command': 'lilycompile:compile'
+    }
+  ]
+'menu': [
+  {
+    'label': 'Packages'
+    'submenu': [
+      'label': 'Lilycompile'
+      'submenu': [
+        {
+          'label': 'Compile'
+          'command': 'lilycompile:compile'
+        }
+      ]
+    ]
+  }
+]

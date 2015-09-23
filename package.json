@@ -1,0 +1,20 @@
+{
+  "name": "lilycompile",
+  "main": "./lib/main.coffee",
+  "version": "0.0.0",
+  "description": "Compile Lilypond files from atom and open them.",
+  "keywords": [
+    "lilypond"
+  ],
+  "activationCommands": {
+    "atom-workspace": "lilycompile:compile"
+  },
+  "repository": "https://github.com/atom/lilycompile",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+  "dependencies": {
+    "mkdirp": "^0.5.1"
+  }
+}
