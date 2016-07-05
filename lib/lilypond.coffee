@@ -24,8 +24,9 @@ module.exports =
       outputName = @determineOutputName filePath
 
       return new Promise (resolve, reject) ->
-        child_process.exec command, options, (error) ->
+        child_process.exec command, options, (error, stdout, stderr) ->
           if error?
+            atom.notifications.addError 'Lilypond Compilation Error', dismissable: true, detail: stderr
             reject error
           else
             result =
@@ -77,6 +78,8 @@ module.exports =
         mkdirp.sync location
 
       if stats? and not stats.isDirectory()
+        atom.notifications.addError "Can not output files to #{location},
+        path already exists and is not a directory.", dismissable: true
         throw new Error "Can not output files to #{location},
         path already exists and is not a directory."
 

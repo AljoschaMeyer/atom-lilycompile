@@ -11,10 +11,12 @@ module.exports =
       editorDetails = @getEditorDetails()
 
       unless editorDetails.filePath?
-        return Promise.reject Error 'Can\'t compile a file not saved to disk.'
+        atom.notifications.addError 'Can only compile .ly files.', dismissable: true
+        return
 
       unless @isLilypondFile editorDetails.filePath
-        return Promise.reject Error 'Can only compile .ly files.'
+        atom.notifications.addError 'Can only compile .ly files.', dismissable: true
+        return
 
       editorDetails.editor.save() if editorDetails.editor.isModified()
 

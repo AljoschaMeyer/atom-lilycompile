@@ -21,19 +21,15 @@ Code structure and features borrowed from and inspired by the atom-latex package
   - [x] activate/deactivate point and click links in pdf
   - [x] activate/deactivate transparent background for png
 
-### TODO
-Loosely sorted by priority. Which might coincide with difficulty of implementation.
-- [ ] unit tests. I already feel bad for publishing this without them.
-- [ ] take a look at the md-preview package for clean file opening
-- [ ] svg support
-- [ ] open output with custom command instead of atom
-- [ ] Visual feedback on compilation
-  - [ ] Show the executed command
-  - [ ] Indicate progress, warnings, errors and success
-  - [ ] Show log
-  - [ ] 'syntax highlighting' for the log: color warnings and errors
-  - [ ] open log file function, jump to first warning/error
-- ...
-- ...
-- ...
-- [ ] working point and click in atom
+### Planned
+- [] Visual feedback on compilation
+  - [] Show the executed command
+  - [] Indicate progress, warnings, errors and success
+  - [] open lilypond error output as file
+
+
+### Possible Features
+Some further features that could be implemented. Let me know if you'd actually need one of these.
+
+- svg support
+- open output with custom command instead of atom
