@@ -43,7 +43,7 @@ module.exports =
 
       unless @config.useCustomArgumentsOnly
         args.push "-f#{@config.fileType}"
-        args.push "-o #{@determineOutputLocation path.dirname filePath}"
+        args.push "-o \"#{@determineOutputLocation path.dirname filePath}\""
 
         switch @config.fileType
           when 'pdf'
@@ -53,7 +53,7 @@ module.exports =
               args.push '-dpixmap-format=pngalpha'
 
       args.push @config.customArguments
-      args.push filePath
+      args.push "\"#{filePath}\""
 
       return args
 
