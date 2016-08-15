@@ -1,7 +1,7 @@
 {
   "name": "lilycompile",
   "main": "./lib/main.coffee",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "Compile Lilypond files from atom and open them.",
   "keywords": [
     "lilypond"
