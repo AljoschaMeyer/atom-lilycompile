@@ -11,25 +11,12 @@ This is only intended to generate previews, not to automate building processes.
 Code structure and features borrowed from and inspired by the atom-latex package.
 
 ## Features
-- [x] compile .ly files to pdf, png or ps
-- [x] configurable output folder location
-- [x] pass custom cli options to lilypad
-- [x] configurable file opening behavior
-  - [x] open in new tab, split pane, or don't open at all
-  - [x] switch to output if already opened (may be turned off)
-- [x] convenient cli option configs:
-  - [x] activate/deactivate point and click links in pdf
-  - [x] activate/deactivate transparent background for png
-
-### Planned
-- [] Visual feedback on compilation
-  - [] Show the executed command
-  - [] Indicate progress, warnings, errors and success
-  - [] open lilypond error output as file
-
-
-### Possible Features
-Some further features that could be implemented. Let me know if you'd actually need one of these.
-
-- svg support
-- open output with custom command instead of atom
+- compile .ly files to pdf, png, svg or ps
+- configurable output folder location
+- pass custom cli options to lilypad
+- configurable file opening behavior
+  - open in new tab, split pane, or don't open at all
+  - switch to output if already opened (may be turned off)
+- convenient cli option configs:
+  - activate/deactivate point and click links in pdf
+  - activate/deactivate transparent background for png

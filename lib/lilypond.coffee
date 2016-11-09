@@ -42,10 +42,13 @@ module.exports =
       args = []
 
       unless @config.useCustomArgumentsOnly
-        args.push "-f#{@config.fileType}"
+        unless @config.fileType is 'svg'
+          args.push "-f#{@config.fileType}"
         args.push "-o \"#{@determineOutputLocation path.dirname filePath}\""
 
         switch @config.fileType
+          when 'svg'
+            args.push '-dbackend=svg'
           when 'pdf'
             args.push '-dno-point-and-click' unless @config.pdf.pointAndClick
           when 'png'

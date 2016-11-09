@@ -50,6 +50,7 @@ module.exports =
       'pdf'
       'png'
       'ps'
+      'svg'
     ]
   pdfSettings:
     title: 'PDF Settings'
