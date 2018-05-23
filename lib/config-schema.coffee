@@ -23,6 +23,11 @@ module.exports =
     or only shown.'
     type: 'boolean'
     default: true
+  compileAfterSave:
+    title: 'Compile Lilypond after saving'
+    description: 'Run `lilycompile:compile` after saving a `.ly` file.'
+    type: 'boolean'
+    default: true
   outputPath:
     description: 'This is where the generated files are placed.
     Relative to the directory where the .ly file is located.'
