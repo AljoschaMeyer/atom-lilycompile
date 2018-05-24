@@ -6,9 +6,6 @@
   "keywords": [
     "lilypond"
   ],
-  "activationCommands": {
-    "atom-workspace": "lilycompile:compile"
-  },
   "repository": "https://github.com/AljoschaMeyer/atom-lilycompile",
   "license": "MIT",
   "engines": {

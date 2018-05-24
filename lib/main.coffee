@@ -15,6 +15,13 @@ module.exports =
 
     @registerCommands()
 
+    @subscriptions.add atom.workspace.observeTextEditors (editor) =>
+      @subscriptions.add editor.onDidSave () =>
+        if atom.config.get('lilycompile.compileAfterSave') and \
+            editor.buffer.file?.path
+          if @controller.isLilypondFile(editor.buffer.file?.path)
+            @controller.compile()
+
   deactivate: ->
     @subscriptions.dispose()
     @controller.deactivate()
