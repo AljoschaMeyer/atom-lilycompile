@@ -11,6 +11,16 @@
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
   },
+
+    "providedServices": {
+      "lilycompile": {
+        "description": "renders editor's filepath from .ly to .pdf file in new editor pane",
+        "versions": {
+          "0.7.0": "provideCompile"
+        }
+      }
+    },
+
   "dependencies": {
     "mkdirp": "^0.5.1"
   }
