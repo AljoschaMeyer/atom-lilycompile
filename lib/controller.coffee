@@ -7,20 +7,27 @@ module.exports =
       @lily = new Lilypond
       @fileOpener = new Opener
 
-    compile: ->
-      editorDetails = @getEditorDetails()
+    empty_path = null
+    compile: (path = empty_path) ->
 
-      unless editorDetails.filePath?
-        atom.notifications.addError 'Can only compile .ly files.', dismissable: true
-        return
+      if path
+        compilePath = path
+      else
+        editorDetails = @getEditorDetails()
 
-      unless @isLilypondFile editorDetails.filePath
-        atom.notifications.addError 'Can only compile .ly files.', dismissable: true
-        return
+        unless editorDetails.filePath?
+          atom.notifications.addError 'Can only compile .ly files.', dismissable: true
+          return
 
-      editorDetails.editor.save() if editorDetails.editor.isModified()
+        unless @isLilypondFile editorDetails.filePath
+          atom.notifications.addError 'Can only compile .ly files.', dismissable: true
+          return
 
-      @lily.compile editorDetails.filePath
+        editorDetails.editor.save() if editorDetails.editor.isModified()
+
+        compilePath = editorDetails.filePath
+
+      @lily.compile compilePath
       .then (result) =>
         @fileOpener.open(result)
         return Promise.resolve()
