@@ -1,7 +1,7 @@
 {
   "name": "lilycompile",
   "main": "./lib/main.coffee",
-  "version": "0.8.0",
+  "version": "0.7.0",
   "description": "Compile Lilypond files from atom and open them.",
   "keywords": [
     "lilypond"
@@ -16,7 +16,7 @@
       "lilycompile": {
         "description": "renders editor's filepath from .ly to .pdf file in new editor pane",
         "versions": {
-          "0.8.0": "provideCompile"
+          "0.7.0": "provideCompile"
         }
       }
     },
