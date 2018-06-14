@@ -37,3 +37,8 @@ module.exports =
   registerCommands: ->
     @subscriptions.add atom.commands.add 'atom-workspace'
     , 'lilycompile:compile': => @controller.compile()
+
+  provideCompile: ->
+    Controller ?= require './controller'
+    @controller = new Controller
+    return @controller
