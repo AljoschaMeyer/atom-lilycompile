@@ -35,9 +35,12 @@ module.exports =
     default: 'tmp'
   binary:
     type: 'string'
+    description: 'The name of the program that gets executed by the plugin.
+    If the plugin [does not work at all](https://github.com/AljoschaMeyer/atom-lilycompile/issues/1), try pasting the value of this option into a terminal and press enter. If that results in an error message, then you need to properly install lilypond itself, or if it is already installed, point the plugin to the correct executable.'
     default: 'lilypond'
   customArguments:
     type: 'string'
+    description: 'Any [command line arguments](http://lilypond.org/doc/v2.18/Documentation/usage/command_002dline-usage.en.html) placed here are used by the plugin when invoking the lilypond binary. This allows you to do anything for which this plugin does not provide a custom option. For example, setting this to `-dresolution=300` would increase the resolution of png output.'
     default: ''
   useCustomArgumentsOnly:
     description: 'Activate this to prevent conflicts between custom arguments
