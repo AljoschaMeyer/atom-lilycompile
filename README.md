@@ -1,5 +1,7 @@
 # Lilycompile
 
+### This code is not maintained anymore
+
 Compile .ly files and view the output - directly within atom.
 
 Comes with one configurable command, lilycompile:compile (ctrl-alt-l), which only triggers in .ly files. Needs the [AtLilyPond](https://atom.io/packages/AtLilyPond) package to recognize .ly files by their grammar.
